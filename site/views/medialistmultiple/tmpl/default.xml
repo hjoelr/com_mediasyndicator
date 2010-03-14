@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<!-- <layout hidden="true" /> -->
+	<state>
+		<params>
+			<param name="title" type="list" default="1" label="Title" description="Indicates whether or not the layout should show the title of the audio file.">
+				<option value="0">Don&#39;t Show</option>
+				<option value="1">Show Text Only</option>
+				<option value="2">Show Text With File Link</option>
+				<option value="3">Show Text With Force Download Link</option>
+			</param>
+			<param name="showPlayer" type="radio" default="1" label="Show Player" description="Indicates whether or not the layout should show the in-page player for playing the audio files.">
+				<option value="0">No</option>
+				<option value="1">Yes</option>
+			</param>
+			<param name="showFileSize" type="radio" default="1" label="Show Filesize" description="Indicates whether or not the layout should show the size of the downloadable file.">
+				<option value="0">No</option>
+				<option value="1">Yes</option>
+			</param>
+			
+			<param name="dateFormat" type="text" default="F j, Y" size="15" label="Date Format" description="Please enter the format that you would like the date to appear in.  You can find examples here: http://php.net/manual/en/function.date.php." />
+
+		</params>
+		<!-- <url>
+			<param />
+		</url> -->
+		<!-- <advanced>
+		</advanced> -->
+	</state>
+</metadata>

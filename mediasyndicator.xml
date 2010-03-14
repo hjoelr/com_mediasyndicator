@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- <!DOCTYPE install SYSTEM "http://dev.joomla.org/xml/1.5/component-install.dtd"> -->
+<install type="component" version="1.5.0">
+	<name>Media Syndicator</name>
+	<creationDate>2010-01-10</creationDate>
+	<author>Joel Rowley</author>
+	<authorEmail>joomlaextensions@joelrowley.com</authorEmail>
+	<authorUrl>http://joomla.joelrowley.com</authorUrl>
+	<copyright>Copyright (c) 2010 Joel Rowley. All Rights Reserved.</copyright>
+	<license>GPL</license>
+	<!--  The version string is recorded in the components table -->
+	<version>0.1.0</version>
+	<!-- The description is optional and defaults to the name -->
+	<description><![CDATA[<p>Thank you for trying Media Syndicator.  This plugin is intended to bridge the gap between a media browser and a
+	podcast feed generator.</p>]]></description>
+
+	<!-- Site Main File Copy Section -->
+	<files folder="site">
+		<filename>controller.php</filename>
+		<filename>mediasyndicator.php</filename>
+		<filename>index.html</filename>
+		<folder>assets</folder>
+		<folder>helpers</folder>
+		<folder>languages</folder>
+		<folder>models</folder>
+		<folder>views</folder>
+	</files>
+	
+	<languages folder="site/languages">
+		<language tag="en-GB">en-GB.com_mediasyndicator.ini</language>
+	</languages>
+	
+	<install>
+		<params>
+			<param name="basebrowserpath" default="/images" />
+		</params>
+		
+		<sql>
+			<file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+		</sql>
+	</install>
+	<!-- <uninstall>
+		<sql>
+			<file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+		</sql>
+	</uninstall>-->
+
+	<administration>
+		<!-- Administration Menu Section -->
+		<menu img="../administrator/components/com_mediasyndicator/assets/images/icon-16-rss.png">Media Syndicator</menu>
+		<submenu>
+			<menu link="option=com_mediasyndicator&amp;view=mediarecords">Configured Files</menu>
+			<menu link="option=com_mediasyndicator&amp;view=mediafeeds">Syndicated Feeds</menu>
+		</submenu>
+		
+		<!-- Administration Main File Copy Section -->
+		<!-- Note the folder attribute: This attribute describes the folder
+			to copy FROM in the package to install therefore files copied
+			in this section are copied from /admin/ in the package -->
+		<files folder="admin">
+			<!-- Site Main File Copy Section -->
+			<filename>index.html</filename>
+			<filename>config.xml</filename>
+			<filename>controller.php</filename>
+			<filename>mediasyndicator.php</filename>
+			<folder>assets</folder>
+			<folder>controllers</folder>
+			<folder>helpers</folder>
+			<folder>languages</folder>
+			<folder>libraries</folder>
+			<folder>models</folder>
+			<folder>sql</folder>
+			<folder>tables</folder>
+			<folder>views</folder>
+		</files>
+		
+		<languages folder="admin/languages">
+			<language tag="en-GB">en-GB.com_mediasyndicator.ini</language>
+		</languages>
+	</administration>
+</install>

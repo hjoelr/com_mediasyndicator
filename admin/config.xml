@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<params>
+		<param type="text" name="basebrowserpath" default="/images" size="25" label="Base File Browser Path" description="Enter the path of the top-most directory that the file browser should go to." />
+	</params>
+</root>
